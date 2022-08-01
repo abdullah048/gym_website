@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Layout = ({ title, children }) => {
 	return (
-		<AnimatePresence>
+		<AnimatePresence exitBeforeEnter initial={true}>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

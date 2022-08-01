@@ -1,11 +1,15 @@
 import React from "react";
-import { Box, Stack, Button, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, useColorModeValue, Text, Image } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 function HeroBanner() {
 	return (
 		<Box className="lg:mt-[212px] sm:mt-[70px] sm:ml-[50px] relative p-20">
-			<h5 className="font-bold text-xl">Fitness Club</h5>
+			<Text
+				className="font-bold text-xl"
+				color={useColorModeValue("red.500", "white")}>
+				Fitness Club
+			</Text>
 			<p className="font-semibold lg:text-[44px] sm:text-[40px]">
 				Sweat, Smile <br /> and Repeat{" "}
 			</p>
@@ -20,19 +24,36 @@ function HeroBanner() {
 				rightIcon={<ArrowForwardIcon />}
 				colorScheme={useColorModeValue("red", "teal")}
 				mt={2}
-				mb={10}
+				sx={{ marginBottom: { xl: "10" } }}
+				p={7}
 				href="#exercises">
 				Explore Exercises
 			</Button>
-			<p
-				className="font-bold text-[200px] opacity-10 mt-10 lg:block xs:hidden"
-				style={{ color: useColorModeValue("#ff2625", "white") }}>
+			<Text
+				fontWeight="bold"
+				fontSize={"200px"}
+				sx={{
+					fontSize: {
+						xl: "12em",
+					},
+					display: { xs: "none", md: "none", sm: "none", xl: "block" },
+				}}
+				color={useColorModeValue("red.50", "whiteAlpha.200")}>
 				Exercise
-			</p>
-			<img
+			</Text>
+			<Image
 				src="/images/banner.png"
 				alt="herobanner"
-				className="hidden lg:block lg:absolute lg:right-[40px] lg:top-0 lg:w-[700px] lg:h-[900px] lg:mt-[-310px]"
+				sx={{
+					position: { xl: "absolute" },
+					display: { xs: "none", sm: "none", xl: "block" },
+					top: { xl: "0" },
+					width: { xl: "700px" },
+					height: { xl: "900px" },
+					marginTop: { xl: "-310px" },
+					right: { xl: "0" },
+				}}
+				// className="hidden lg:block lg:absolute lg:right-[40px] lg:top-0 lg:w-[700px] lg:h-[900px] lg:mt-[-310px]"
 			/>
 		</Box>
 	);
