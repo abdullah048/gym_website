@@ -8,8 +8,8 @@ const breakpoints = {
 	xs: "320px",
 	sm: "425px",
 	md: "786px",
-	lg: "1024px",
-	xl: "1310px",
+	lg: "1163px",
+	xl: "1440px",
 	// "2xl": "1310px",
 };
 const config = {

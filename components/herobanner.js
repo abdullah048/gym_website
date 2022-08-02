@@ -34,9 +34,9 @@ function HeroBanner() {
 				fontSize={"200px"}
 				sx={{
 					fontSize: {
-						xl: "12em",
+						lg: "12em",
 					},
-					display: { xs: "none", md: "none", sm: "none", xl: "block" },
+					display: { xs: "none", md: "none", sm: "none", lg: "block" },
 				}}
 				color={useColorModeValue("red.50", "whiteAlpha.200")}>
 				Exercise
@@ -45,15 +45,14 @@ function HeroBanner() {
 				src="/images/banner.png"
 				alt="herobanner"
 				sx={{
-					position: { xl: "absolute" },
-					display: { xs: "none", sm: "none", xl: "block" },
-					top: { xl: "0" },
-					width: { xl: "700px" },
-					height: { xl: "900px" },
-					marginTop: { xl: "-310px" },
-					right: { xl: "0" },
+					position: { lg: "absolute" },
+					display: { xs: "none", sm: "none", lg: "block" },
+					top: { lg: "0" },
+					width: { lg: "600px" },
+					height: { lg: "900px" },
+					marginTop: { lg: "-310px" },
+					right: { lg: "0" },
 				}}
-				// className="hidden lg:block lg:absolute lg:right-[40px] lg:top-0 lg:w-[700px] lg:h-[900px] lg:mt-[-310px]"
 			/>
 		</Box>
 	);
