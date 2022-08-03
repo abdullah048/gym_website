@@ -13,12 +13,13 @@ function ExerciseCard({ exercise }) {
 	return (
 		<HStack
 			width="350px"
-			height="400px"
+			height="470px"
 			display="flex"
 			justifyContent="space-between"
 			flexDirection="column"
 			borderRadius="20px"
-			sx={{ mb: { sx: "50px", sm: "70px" } }}>
+			sx={{ mb: { sx: "50px", sm: "70px" } }}
+		>
 			<NextLink href={`/exercise/${exercise.id}`} passHref>
 				<Link _hover={{ textDecoration: "none" }}>
 					<Image
@@ -36,7 +37,8 @@ function ExerciseCard({ exercise }) {
 								boxShadow: "lg",
 								textTransform: "capitalize",
 								bg: useColorModeValue("gray.300"),
-							}}>
+							}}
+						>
 							{exercise.bodyPart}
 						</Button>
 						<Button
@@ -46,7 +48,8 @@ function ExerciseCard({ exercise }) {
 								boxShadow: "lg",
 								textTransform: "capitalize",
 								bg: useColorModeValue("", "teal.500"),
-							}}>
+							}}
+						>
 							{exercise.target}
 						</Button>
 					</HStack>
@@ -58,7 +61,8 @@ function ExerciseCard({ exercise }) {
 						sx={{
 							mt: { xs: "3px", sm: "7px", lg: "15px", xl: "20px" },
 							fontSize: { xl: "larger" },
-						}}>
+						}}
+					>
 						{exercise.name}
 					</Text>
 				</Link>
