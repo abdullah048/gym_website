@@ -1,17 +1,17 @@
-import Layout from "../components/layout";
-import { Box } from "@chakra-ui/react";
-import HeroBanner from "../components/herobanner";
-import Search from "../components/search";
-import Exercises from "../components/exercises";
-import { useState } from "react";
-import React from "react";
+import Layout from '../components/layout';
+import { Box } from '@chakra-ui/react';
+import HeroBanner from '../components/herobanner';
+import Search from '../components/search';
+import Exercises from '../components/exercises';
+import { useState } from 'react';
+import React from 'react';
 
 export default function Home() {
   //FIXME:Create a store instead of props-drilling...
   const [exercises, setExercises] = useState([]);
-  const [exerciseCategory, setExerciseCategory] = useState("all");
+  const [exerciseCategory, setExerciseCategory] = useState('all');
   return (
-    <Layout title="Home">
+    <Layout title='Home'>
       <Box>
         <HeroBanner />
         <Search
